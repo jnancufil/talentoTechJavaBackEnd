@@ -1,6 +1,6 @@
-package model; 
+package org.talentoTech.javaBackEnd.productos; 
 
-public class Producto {
+public abstract class Producto {
     private int id; 
     private String nombre; 
     private double precio; 
@@ -33,20 +33,32 @@ public class Producto {
     public void setPrecio(int precio){
         this.precio = precio; 
     }
-    public void setStockInicial(int stock){
+    public void setStock(int stock){
         this.stockDisponible = stock; 
     }
     public void setId(int id){
         this.id = id; 
     }
 
+    @Override
+    public String toString() {
+        return "ID: " + id +
+                " | " + nombre +
+                " | $" + precio +
+                " | Stock: " + stockDisponible; 
+    }
+
+
     public void mostrarProducto() {
         System.out.println("ID: " + id +
                 " | " + nombre +
                 " | $" + precio +
-                " | Stock: " + stock);
+                " | Stock: " + stockDisponible);
     }
 
+    public boolean hayStock(int cantDeseada){
+        return (cantDeseada <= this.stockDisponible) && (cantDeseada >= 0); 
+    }
 
     
 

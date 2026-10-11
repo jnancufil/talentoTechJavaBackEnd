@@ -1,0 +1,1 @@
+> **Nota:** En esta primera entrega no alcance a finalizar el menu principal, me faltaron el desarrollo de validaciones con el manejo de excepciones, y la clase ServiceProducto le falta bastante desarrollo tambien. 
